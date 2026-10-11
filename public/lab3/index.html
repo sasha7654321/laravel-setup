@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №3 - Файли</title>
+</head>
+<body>
+    <h1>Лабораторна робота №3</h1>
+
+    <!--Завантаження зображення-->
+    <section>
+        <h2>1. Завантаження файлу (зображення до 2 МБ)</h2>
+        <form action="process.php" method="POST" enctype="multipart/form-data">
+            <label for="file">Оберіть файл (png, jpg, jpeg):</label><br><br>
+            <input type="file" id="file" name="upload_file" accept=".png, .jpg, .jpeg" required><br><br>
+            <button type="submit">Завантажити файл</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <!--Запис тексту -->
+    <section>
+        <h2>2. Запис тексту у файл log.txt</h2>
+        <form action="text.php" method="POST">
+            <label for="log_text">Введіть текст для запису:</label><br><br>
+            <textarea id="log_text" name="log_text" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Записати у log.txt</button>
+        </form>
+        <br>
+        <a href="text.php">Переглянути вміст log.txt</a>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>3. Перегляд завантажених файлів</h2>
+        <a href="list.php">Перейти до списку файлів у папці uploads</a>
+    </section>
+</body>
+</html>
